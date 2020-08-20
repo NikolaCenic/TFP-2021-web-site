@@ -1,17 +1,18 @@
 const menuItems = {
-    home: {text: 'Home', link: 'home.html'},
-    callForPapers: {text: 'Call for Papers', link: 'callForPapers.html'},
-    tfpSeries: {text: 'The TFP Series', link: 'http://www.trendsfp.com/tifp/'},
-    organization: {text: 'Organization', link: 'organization.html'},
-    proceedings: {text: 'Proceedings', link: 'proceedings.html'},
-    registration: {text: 'Registration', link: 'registration.html'}
+    home: {text: 'Home', link: 'home.html', icon: 'fa fa-home'},
+    callForPapers: {text: 'Call for Papers', link: 'callForPapers.html', icon: 'fas fa-scroll'},
+    tfpSeries: {text: 'The TFP Series', link: 'http://www.trendsfp.com/tifp/', icon: 'fas fa-paper-plane'},
+    organization: {text: 'Organization', link: 'organization.html', icon: 'fas fa-clipboard-list'},
+    proceedings: {text: 'Proceedings', link: 'proceedings.html', icon: 'fas fa-book'},
+    registration: {text: 'Registration', link: 'registration.html', icon: 'fas fa-sign-in-alt'}
 };
 
 const renderMenu = (pageKey) => {
     const menuItemsHtml = Object.keys(menuItems).map((menuItemKey) => {
-        console.log(menuItems[menuItemKey].link);
+        const menuItem = menuItems[menuItemKey];
         return `<li class="py-2 list-group-item bg-transparent col mt-3 text-white page-menu-item ${menuItemKey === pageKey ? "active" : ""}" 
-                onclick="window.location.href='${menuItems[menuItemKey].link}'">${menuItems[menuItemKey].text}</li>`
+                onclick="window.location.href='${menuItem.link}'">
+                <i class="${menuItem.icon}"></i> ${menuItem.text}</li>`
     }).join('');
     const menuInnerHtml = `  
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
