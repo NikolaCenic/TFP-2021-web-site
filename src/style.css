@@ -4,3 +4,10 @@ button:hover{
 button:active{
     transform: scale(1.5);
 }
+.page-menu-item.active {
+    font-weight: bold;
+}
+
+.page-menu-item {
+    border: none !important;
+}
