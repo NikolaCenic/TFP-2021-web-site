@@ -19,7 +19,7 @@ const renderMenu = (pageKey) => {
                     aria-controls="navbarContent" aria-expanded="true" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse" id="navbarContent">
+                <div class="navbar-collapse-improved collapse" id="navbarContent">
                     <ul class="list-group sticky-top">
                         <li onclick="window.location.href='home.html'" 
                             class="py-2 list-group-item bg-transparent col h3 font-weight-bold mt-3 mb-3 text-white page-menu-item">
