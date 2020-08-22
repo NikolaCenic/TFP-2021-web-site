@@ -3,8 +3,8 @@ const menuItems = {
     callForPapers: {text: 'Call for Papers', link: 'callForPapers.html', icon: 'fas fa-scroll'},
     tfpSeries: {text: 'The TFP Series', link: 'http://www.trendsfp.com/tifp/', icon: 'fas fa-paper-plane'},
     organization: {text: 'Organization', link: 'organization.html', icon: 'fas fa-clipboard-list'},
-    proceedings: {text: 'Proceedings', link: 'proceedings.html', icon: 'fas fa-book'},
-    registration: {text: 'Registration', link: 'registration.html', icon: 'fas fa-sign-in-alt'}
+    // proceedings: {text: 'Proceedings', link: 'proceedings.html', icon: 'fas fa-book'},
+    // registration: {text: 'Registration', link: 'registration.html', icon: 'fas fa-sign-in-alt'}
 };
 
 const renderMenu = (pageKey) => {
