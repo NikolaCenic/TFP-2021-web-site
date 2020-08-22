@@ -51,6 +51,10 @@ a:visited {
     color: blue;
 }
 
+.navbar{
+    height: -webkit-fill-available;
+}
+
 @media only screen and (min-width: 1000px) {
 
     .navbar-collapse-improved {
@@ -60,4 +64,7 @@ a:visited {
         align-items: unset;
     }
    
+    .navbar{
+        height: auto;
+    }
 }
