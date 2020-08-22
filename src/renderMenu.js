@@ -1,5 +1,5 @@
 const menuItems = {
-    home: {text: 'Home', link: 'home.html', icon: 'fa fa-home',target:'_self'},
+    home: {text: 'Home', link: 'index.html', icon: 'fa fa-home',target:'_self'},
     callForPapers: {text: 'Call for Papers', link: 'callForPapers.html', icon: 'fas fa-scroll',target:'_self'},
     tfpSeries: {text: 'The TFP Series', link: 'http://www.trendsfp.com/tifp/', icon: 'fas fa-paper-plane',target:'_blank'},
     organization: {text: 'Organization', link: 'organization.html', icon: 'fas fa-clipboard-list',target:'_self'},
@@ -21,7 +21,7 @@ const renderMenu = (pageKey) => {
                 </button>
                 <div class="navbar-collapse-improved collapse" id="navbarContent">
                     <ul class="list-group sticky-top">
-                        <li onclick="window.location.href='home.html'" 
+                        <li onclick="window.location.href='index.html'" 
                             class="py-2 list-group-item bg-transparent col h3 font-weight-bold text-white page-menu-item">
                             TFP 2021</li>
                         ${menuItemsHtml}
