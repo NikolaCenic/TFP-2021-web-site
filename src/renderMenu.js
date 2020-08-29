@@ -1,18 +1,18 @@
 const menuItems = {
-    home: {text: 'Home', link: 'home.html', icon: 'fa fa-home'},
-    callForPapers: {text: 'Call for Papers', link: 'callForPapers.html', icon: 'fas fa-scroll'},
-    tfpSeries: {text: 'The TFP Series', link: 'http://www.trendsfp.com/tifp/', icon: 'fas fa-paper-plane'},
-    organization: {text: 'Organization', link: 'organization.html', icon: 'fas fa-clipboard-list'},
-    proceedings: {text: 'Proceedings', link: 'proceedings.html', icon: 'fas fa-book'},
-    registration: {text: 'Registration', link: 'registration.html', icon: 'fas fa-sign-in-alt'}
+    home: {text: 'Home', link: 'index.html', icon: 'fa fa-home',target:'_self'},
+    callForPapers: {text: 'Call for Papers', link: 'callForPapers.html', icon: 'fas fa-scroll',target:'_self'},
+    tfpSeries: {text: 'The TFP Series', link: 'http://www.trendsfp.com/tifp/', icon: 'fas fa-paper-plane',target:'_blank'},
+    organization: {text: 'Organization', link: 'organization.html', icon: 'fas fa-clipboard-list',target:'_self'},
+    // proceedings: {text: 'Proceedings', link: 'proceedings.html', icon: 'fas fa-book'},
+    // registration: {text: 'Registration', link: 'registration.html', icon: 'fas fa-sign-in-alt'}
 };
 
 const renderMenu = (pageKey) => {
     const menuItemsHtml = Object.keys(menuItems).map((menuItemKey) => {
         const menuItem = menuItems[menuItemKey];
         return `<li class="py-2 list-group-item bg-transparent col mt-3 text-white page-menu-item ${menuItemKey === pageKey ? "active" : ""}" 
-                onclick="window.location.href='${menuItem.link}'">
-                <i class="${menuItem.icon}"></i> ${menuItem.text}</li>`
+                ">
+            <a class='text-white text-decoration-none' href='${menuItem.link}' target='${menuItem.target}'>  <i class="${menuItem.icon}" ></i> ${menuItem.text}</a></li>`
     }).join('');
     const menuInnerHtml = `  
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
@@ -21,7 +21,7 @@ const renderMenu = (pageKey) => {
                 </button>
                 <div class="navbar-collapse-improved collapse" id="navbarContent">
                     <ul class="list-group sticky-top">
-                        <li onclick="window.location.href='home.html'" 
+                        <li onclick="window.location.href='index.html'" 
                             class="py-2 list-group-item bg-transparent col h3 font-weight-bold text-white page-menu-item">
                             TFP 2021</li>
                         ${menuItemsHtml}
