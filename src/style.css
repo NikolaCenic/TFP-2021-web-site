@@ -52,7 +52,9 @@ a:visited {
 }
 
 .navbar{
-    height: -webkit-fill-available;
+    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    height: -moz-available;          /* WebKit-based browsers will ignore this. */
+    height: fill-available;
 }
 
 @media only screen and (min-width: 1000px) {
