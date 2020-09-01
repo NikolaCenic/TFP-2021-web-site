@@ -67,9 +67,9 @@ const renderMenu = (pageKey) => {
     pageMenuHtmlElement.classList.add("navbar", "navbar-dark", "navbar-expand-lg", "col-lg-2", "flex-lg-column", "bg-info");
     arr=document.getElementById("toggler").addEventListener("click", changeSize);
     elem=document.getElementsByClassName('navbar')[0];
-    if(screen.width>400)
+    if(screen.width>400 && screen.width<1000)
     elem.style.height='10vh';
-    else
+    else if(screen.width<1000)
     elem.style.height='8vh';
 
 
