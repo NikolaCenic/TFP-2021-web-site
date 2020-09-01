@@ -52,8 +52,18 @@ a:visited {
 }
 
 .navbar{
-    height: -webkit-fill-available;
+  height:  -blink-fill-available;
+
 }
+@media only screen and (max-width: 1000px) {
+    .navbar{
+  
+height:10vh;
+    }
+
+
+}
+
 
 @media only screen and (min-width: 1000px) {
 
@@ -65,7 +75,7 @@ a:visited {
     }
    
     .navbar{
-        height: auto;
+        height:auto ;
         margin : 0;
         padding : 0;
     }

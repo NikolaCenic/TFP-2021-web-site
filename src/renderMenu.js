@@ -1,3 +1,37 @@
+openCloseToggler=0;/* deffinitely not the greatest approach but I had issues converting vh to px-Nikola*/
+function changeSize()
+{elem=document.getElementsByClassName('navbar')[0];
+console.log(screen.width)
+if(screen.width>400)
+{
+    if(openCloseToggler==0)
+    {
+        elem.style.height='50vh';
+        openCloseToggler=1;
+    }
+    
+      else 
+      {
+          elem.style.height='10vh';
+          openCloseToggler=0;
+      }
+    }
+    else
+{
+    if(openCloseToggler==0)
+    {
+        elem.style.height='30vh';
+        openCloseToggler=1;
+    }
+    
+      else 
+      {
+          elem.style.height='8vh';
+          openCloseToggler=0;
+      }
+    }
+      
+}
 const menuItems = {
     home: {text: 'Home', link: 'index.html', icon: 'fa fa-home',target:'_self'},
     callForPapers: {text: 'Call for Papers', link: 'callForPapers.html', icon: 'fas fa-scroll',target:'_self'},
@@ -15,7 +49,7 @@ const renderMenu = (pageKey) => {
             <a class='text-white text-decoration-none' href='${menuItem.link}' target='${menuItem.target}'>  <i class="${menuItem.icon}" ></i> ${menuItem.text}</a></li>`
     }).join('');
     const menuInnerHtml = `  
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                <button class="navbar-toggler" id='toggler' type="button" data-toggle="collapse" data-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="true" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -31,6 +65,13 @@ const renderMenu = (pageKey) => {
     const pageMenuHtmlElement = document.getElementById("page-menu");
     pageMenuHtmlElement.innerHTML = menuInnerHtml;
     pageMenuHtmlElement.classList.add("navbar", "navbar-dark", "navbar-expand-lg", "col-lg-2", "flex-lg-column", "bg-info");
+    arr=document.getElementById("toggler").addEventListener("click", changeSize);
+    elem=document.getElementsByClassName('navbar')[0];
+    if(screen.width>400)
+    elem.style.height='10vh';
+    else
+    elem.style.height='8vh';
 
+
+  
 };
-
